@@ -35,11 +35,13 @@ function play(question, answer) {
   let userAnswer = readLineSync.question(question)
   if (userAnswer.toUpperCase() === answer.toUpperCase()) {
     console.log("You are Right! ")
-    score++
+    score += 2
   } else {
     console.log("Wrong Answer! ")
     score--
   }
+  console.log("Your Score is: ", score)
+  console.log("------------")
 }
 
 for (let i = 0; i < quiz.length; i++) {
